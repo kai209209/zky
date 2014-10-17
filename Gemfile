@@ -77,6 +77,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'spork-rails'
   gem 'guard-spork'
+  gem 'guard-rspec'
   gem 'childprocess'
 end
 
