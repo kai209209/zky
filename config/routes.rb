@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resource :user
 
   root to: 'static#index'
+
+  get 'static/about'
   
 end

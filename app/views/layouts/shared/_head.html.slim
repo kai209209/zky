@@ -5,9 +5,9 @@ head.inner id="head"
     .row
       .col-md-8.col-md-offset-2
         ul.nav.nav-tabs role="tablist"
-          li role="presentation" class="#{ 'active' if params[:controller] == 'static' }"
+          li role="presentation" class="#{ 'active' if params[:controller] == 'static' && params[:action] == 'index' }"
             = link_to "Home", root_path
           li role="presentation"
             = link_to "Archives", "#"
-          li role="presentation"
-            = link_to "About Me", "#"
+          li role="presentation" class="#{ 'active' if params[:controller] == 'static' && params[:action] == 'about' }"
+            = link_to "About Me",  static_about_path
