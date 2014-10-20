@@ -11,3 +11,8 @@ head.inner id="head"
             = link_to "Archives", "#"
           li role="presentation"
             = link_to "About Me", "#"
+          - if signed_in?
+            li = link_to "sign out",  destroy_user_session_path, method: :delete
+          - else
+            li = link_to "sign in", new_user_session_path
+            li = link_to "sign up", new_user_registration_path
