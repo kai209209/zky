@@ -7,5 +7,9 @@ html
     = csrf_meta_tags
 
   body
-    = render "layouts/shared/head"
-    = yield
+    .container
+      .row 
+        .col-md-12
+          = render 'layouts/shared/nav'
+          = render "layouts/shared/head"
+          = yield

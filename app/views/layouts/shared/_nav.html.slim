@@ -1,0 +1,14 @@
+ul.nav.navbar-nav.navbar-right
+  li.dropdown
+    a.dropdown-toggle data-toggle="dropdown" href="#" 
+      | Dropdown
+      span.caret
+    ul.dropdown-menu role="menu" 
+      - if signed_in?
+        li role="presentation" 
+          = link_to "sign out",  destroy_user_session_path, method: :delete
+        li role="presentation" 
+          = link_to "me", user_path
+      - else
+        li role="presentation" 
+          = link_to "sign in", new_user_session_path

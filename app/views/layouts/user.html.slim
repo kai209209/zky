@@ -7,9 +7,11 @@ html
     = csrf_meta_tags
 
   body
-    header
-      = yield :pagetitle
+    .container
+      .row
+          header
+            = yield :pagetitle
 
-    .container  
-      .row.content
-        = yield
+          .container  
+            .row.content
+              = yield

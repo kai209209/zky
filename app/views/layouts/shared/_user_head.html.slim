@@ -1,3 +1,4 @@
+= render 'layouts/shared/nav'
 head.inner id="head"
   h1.animated.bounceInDown
     #headerbg do it
@@ -5,13 +6,7 @@ head.inner id="head"
     .row
       .col-md-8.col-md-offset-2
         ul.nav.nav-tabs role="tablist"
-          li role="presentation" class="active"
-            = link_to "Home", "#"
+          li role="presentation" class="#{ 'active' if params[:controller] == 'static' }"
+            = link_to "Home", root_path
           li role="presentation"
             = link_to "Archives", "#"
-          li role="presentation"
-            = link_to "About Me", "#"
-          - if signed_in?
-            li = link_to "sign out",  destroy_user_session_path, method: :delete
-          - else
-            li = link_to "sign in", new_user_session_path
