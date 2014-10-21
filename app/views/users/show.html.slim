@@ -35,10 +35,10 @@
           tr.info
             td.text-right
               code skill
-            td #{current_user.skill}
+            td #{sanitize current_user.skill}
           tr.info
             td.text-right
               code work_experience
-            td #{current_user.work_experience}
+            td #{sanitize current_user.work_experience}
 
   = link_to "edit", edit_user_path, class: "btn btn-default"
