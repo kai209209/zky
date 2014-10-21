@@ -339,6 +339,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   meta_request
+  nokogiri
   paranoia!
   pg
   puma
