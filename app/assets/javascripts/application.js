@@ -17,3 +17,5 @@
 //= require bootstrap/transition
 //= require bootstrap/collapse 
 //= require bootstrap/dropdown
+//= require jquery.qeditor
+//= require jquery.caret

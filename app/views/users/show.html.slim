@@ -1,4 +1,44 @@
-= content_for :pagetitle do
-  .widewrapper.pagetitle
-    .container
-      = render 'layouts/shared/user_head'
+.col-md-8.col-md-offset-2
+  br
+  .table-responsive
+    table.table
+      colgroup
+        tbody
+          tr.info
+            td.col-md-2.text-right
+              code name
+            td.col-md-6 #{current_user.name}
+          tr.info
+            td.text-right
+              code email
+            td #{current_user.email}
+          tr.info
+            td.text-right
+              code age
+            td #{current_user.age}
+          tr.info
+            td.text-right
+              code city
+            td #{current_user.city}
+          tr.info
+            td.text-right
+              code github
+            td #{current_user.github}
+          tr.info
+            td.text-right
+              code current_sign_in_ip
+            td #{current_user.current_sign_in_ip}
+          tr.info
+            td.text-right
+              code last_sign_in_ip
+            td #{current_user.last_sign_in_ip}
+          tr.info
+            td.text-right
+              code skill
+            td #{current_user.skill}
+          tr.info
+            td.text-right
+              code work_experience
+            td #{current_user.work_experience}
+
+  = link_to "edit", edit_user_path, class: "btn btn-default"

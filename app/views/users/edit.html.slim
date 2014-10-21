@@ -1,0 +1,10 @@
+.col-md-8.col-md-offset-2
+  br
+  = simple_form_for(current_user, url: user_path, method: :patch) do |f|
+    = f.input :name
+    = f.input :age
+    = f.input :city
+    = f.input :github
+    = f.input :skill
+    = f.input :work_experience, input_html: { class: 'rich_text_format' }
+    = f.button :submit, class: 'btn, btn-default'
