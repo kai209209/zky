@@ -43,7 +43,7 @@ gem 'activeadmin', github: 'activeadmin'
 
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
-gem "font-awesome-rails"
+# gem "font-awesome-rails"
 
 
 # Use ActiveModel has_secure_password

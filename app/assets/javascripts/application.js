@@ -19,3 +19,13 @@
 //= require bootstrap/dropdown
 //= require jquery.qeditor
 //= require jquery.caret
+//= require jquery.min
+//= require module
+//= require uploader
+//= require simditor
+
+$(document).on('ready page:load', function(){
+  var editor = new Simditor({
+    textarea: $('#editor')
+  });
+})
